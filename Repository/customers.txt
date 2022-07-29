@@ -1,0 +1,3 @@
+1	Ajala	Driver	Male	pass	email	abk	09088776655		2/2/1980 12:00:00 AM
+1	kuda	alabi	Male	pass	alabi	aab	09088998877		2/2/2000 12:00:00 AM
+1	ola	kunle	Male	password	ola@gmail.com	abk	0909988776656		9/9/1890 12:00:00 AM
