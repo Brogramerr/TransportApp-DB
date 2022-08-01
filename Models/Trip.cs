@@ -42,15 +42,7 @@ namespace TransportApp.Models
             return (EndTime.Ticks - StartTime.Ticks) * (0.001m) ;
         }
 
-        internal static Trip FormatLine(string line)
-        {
-            var props = line.Split('\t');
-          return new Trip(int.Parse(props[0]), DateTime.Parse(props[1]), Driver.FormatLine(props[2]),Customer.FormatLine(props[3]), props[4], props[5], props[6]);
-       }
-        public override string ToString()
-        {
-          return $"{Id}\t{StartTime}\t{Driver.FirstName}\t{Customer.FirstName}\t{StartLocation}\t{EndLocation}\t{Reference}";
-        }
+        
 
 
     }

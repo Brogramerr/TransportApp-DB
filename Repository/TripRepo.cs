@@ -32,8 +32,8 @@ namespace TransportApp.Repository
                 var lines = File.ReadAllLines(@"C:\Users\HI\source\repos\TransportApp\Repository\trips.txt");
                 foreach (var line in lines)
                 {
-                    var trip = Trip.FormatLine(line);
-                    trips.Add(trip);
+                   
+                    
                 }
             }
         }

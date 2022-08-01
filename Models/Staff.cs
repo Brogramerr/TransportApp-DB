@@ -13,7 +13,7 @@ namespace TransportApp.Models
         public Role Role { get; set; }
 
         public Staff(int id, string firstName, string lastName, Gender gender, string password, string email, string address, string phoneNo, string nextOfKin, DateTime dob, Role role) :
-       base(id, firstName, lastName, gender, password, email, address, phoneNo, nextOfKin, dob)
+       base(id, firstName, lastName, gender, password, email, address, phoneNo, dob)
         {
             StaffNo = $"ST{Guid.NewGuid().ToString().Replace("-", " ").Substring(0, 5).ToUpper()}";
             Role = role;

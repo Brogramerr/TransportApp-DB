@@ -32,7 +32,7 @@ namespace TransportApp.Repository
                 var lines = File.ReadAllLines(@"C:\Users\HI\source\repos\TransportApp\Repository\drivers.txt");
                 foreach (var line in lines)
                 {
-                    var driver = Driver.FormatLine(line);
+                    
                     drivers.Add(driver);
                 }
             }
@@ -42,13 +42,7 @@ namespace TransportApp.Repository
         public bool Register(string firstName, string lastName, Gender gender, string password,
        string email, string address, string phoneNo, string nextOfKin, DateTime dob,string location)
         {
-            var driver = new Driver(count,firstName,lastName,gender,password,email,address,phoneNo,nextOfKin,dob,location);
-            drivers.Add(driver);
-            TextWriter writer = new StreamWriter(@"C:\Users\HI\source\repos\TransportApp\Repository\drivers.txt", true);
-            writer.WriteLine(driver.ToString());
-            writer.Close();
-            Console.WriteLine("Succesfully added");
-            count++;
+            
             return true;
         }
 

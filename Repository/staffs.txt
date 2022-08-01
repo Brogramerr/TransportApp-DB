@@ -1,2 +1,0 @@
-1	YAsir	Fagbolade	Male	pass	yas@gmail.com	abk	09088776655		2/2/2000 12:00:00 AM	Manager
-0	yas	fagbo	Male	pass	qqq	email	09099887766		2/2/2000 12:00:00 AM	Receptionist

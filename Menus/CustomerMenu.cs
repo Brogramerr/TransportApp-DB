@@ -5,12 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using TransportApp.Repository;
 using TransportApp.Enums;
+using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace TransportApp.Menus
 {
 
     public class CustomerMenu
     {
+        
         CustomerRepo customerRepo = new CustomerRepo();
         BookingRepo bookingRepo = new BookingRepo();
 
@@ -56,11 +59,11 @@ namespace TransportApp.Menus
             Console.WriteLine("Enter Your Last Name");
             string lastName = Console.ReadLine();
             Console.WriteLine("Enter Your  Gender: 1 for Male\t2 for Female\t3 for i don't know ");
-            int gender;
+           /* int gender;
             while (!int.TryParse(Console.ReadLine(), out gender))
             {
                 Console.WriteLine("Invalid input enter 1, 2 or 3");
-            }
+            }*/
 
             Console.WriteLine("Enter  Password");
             string password = Console.ReadLine();
@@ -70,15 +73,14 @@ namespace TransportApp.Menus
             string address = Console.ReadLine();
             Console.WriteLine("Enter Your Phone Number");
             string phoneNumber = Console.ReadLine();
-            Console.WriteLine("Enter Your Next Of Kin");
-            string nextOfKin = Console.ReadLine();
+            
             Console.WriteLine("Enter Your Date Of Birth (YYYY-MM-DD)");
             DateTime dateOfBirth;
             while (!DateTime.TryParse(Console.ReadLine(), out dateOfBirth))
             {
                 Console.WriteLine("Invalid Format enter (YYYY-MM-DD) ");
             }
-            customerRepo.AddCustomer(firstName, lastName, (Gender)gender, password, email, address, phoneNumber, nextOfKin, dateOfBirth);
+            customerRepo.AddCustomer(firstName, lastName, password, email, address, phoneNumber);
         }
 
         private void LoginMenu()

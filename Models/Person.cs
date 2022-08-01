@@ -25,7 +25,7 @@ namespace TransportApp.Models
 
         }
 
-        public Person(int id, string firstName, string lastName, Gender gender, string password, string email, string address, string phoneNo, string nextOfKin, DateTime dob)
+        public Person(int id, string firstName, string lastName, Gender gender, string password, string email, string address, string phoneNo, DateTime dob)
         {
             Id = id;
             FirstName = firstName;
@@ -36,6 +36,18 @@ namespace TransportApp.Models
             Password = password;
             PhoneNo = phoneNo;
             DateOfBirth = dob;
+        }
+        public Person(string firstName, string lastName, string password, string email, string address, string phoneNo)
+        {
+            
+            FirstName = firstName;
+            LastName = lastName;
+           
+            Email = email;
+            Address = address;
+            Password = password;
+            PhoneNo = phoneNo;
+           
         }
 
 
