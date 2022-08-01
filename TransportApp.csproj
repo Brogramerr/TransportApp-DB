@@ -9,9 +9,4 @@
     <PackageReference Include="MySql.Data" Version="8.0.30" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Implementations\Repositories\" />
-    <Folder Include="Interfaces\IServices\" />
-  </ItemGroup>
-
 </Project>

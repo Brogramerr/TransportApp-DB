@@ -10,17 +10,19 @@ namespace TransportApp.Interfaces.IRepositories
     public interface ICustomerRepo
     {
 
-        public int create();
+        Customer create();
 
-        public bool AddCustomer(string firstName, string lastName, string password,string email, string address, string phoneNo);
+        Customer AddCustomer(string firstName, string lastName, string password,string email, string address, string phoneNo);
 
-        public bool InsertStudent(Customer customer);
-        public void displayAll();
+        Customer InsertStudent(Customer customer);
+        IEnumerable<Customer> displayAll();
 
       //  public Customer find(string lastName);
 
         public void Login(string email, string password);
 
         public void FundWallet(Customer customer);
+       Customer Get(int id);
+
     }
 }

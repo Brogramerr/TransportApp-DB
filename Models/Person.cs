@@ -37,6 +37,20 @@ namespace TransportApp.Models
             PhoneNo = phoneNo;
             DateOfBirth = dob;
         }
+
+        public Person(string firstName, string lastName, Gender gender, string password, string email, string address, string phoneNo, DateTime dob)
+        {
+            
+            FirstName = firstName;
+            LastName = lastName;
+            Gender = gender;
+            Email = email;
+            Address = address;
+            Password = password;
+            PhoneNo = phoneNo;
+            DateOfBirth = dob;
+        }
+
         public Person(string firstName, string lastName, string password, string email, string address, string phoneNo)
         {
             

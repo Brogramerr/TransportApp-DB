@@ -28,6 +28,13 @@ namespace TransportApp.Models
             Wallet = 0m;
         }
 
+        public Customer(string firstName, string lastName, Gender gender, string password, string email, string address, string phoneNo, DateTime dob) :
+        base(firstName, lastName, gender, password, email, address, phoneNo, dob)
+        {
+            CustomerNo = $"CUS{Guid.NewGuid().ToString().Replace("-", " ").Substring(0, 5).ToUpper()}";
+            Wallet = 0m;
+        }
+
         public Customer(int id, string firstName, string lastName, Gender gender, string password, string email, string address, string phoneNo, DateTime dob) :
         base(id, firstName, lastName, gender, password, email, address, phoneNo, dob)
         {
