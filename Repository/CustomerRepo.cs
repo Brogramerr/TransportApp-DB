@@ -46,7 +46,6 @@ namespace TransportApp.Repository
         public void AddCustomer(string firstName, string lastName, string password,
         string email, string address, string phoneNo)
         {
-            //Customer customer = new Customer(count, firstName, lastName, gender,password,email,address,phoneNo,nextOfKin,dob);
             var customer = new Customer(firstName,lastName,password,email,address,phoneNo);
             InsertStudent(customer);
             Console.WriteLine("Successfull");
@@ -78,19 +77,21 @@ namespace TransportApp.Repository
             }
         }
 
-
-
-
+        public void displayAll()
+        {
+            List<Customer> customers = getAll();
+            foreach (Customer customer in customers)
+            {
+                Console.WriteLine($"{customer.Id}, {customer.FullName()}, {aircraft.getType()}, {aircraft.getCapacity()}, {aircraft.getManufacturer()}, {aircraft.getCruiseSpeed()}");
+            }
+        }
 
 
         public Customer Login(string email, string password)
         {
-
-
             Customer customer = null;
             try
             {
-                
                 var sql = "select firstName,lastName,password,email,address,phoneNo from customer where email = '" + email + "'";
                 MySqlCommand command = new MySqlCommand(sql, connection);
                 connection.Open();
@@ -108,21 +109,14 @@ namespace TransportApp.Repository
                     customer = new Customer(fName, lName, pass, mail, address, phone);
 
                 }
-                //Console.WriteLine(reader[0] + " -- " + reader[1]);
-
-
             }
-
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
             }
             connection.Close();
             return customer;
-
         }
-
-      //  public void GetCustomer(string email)
 
 
         public void FundWallet(Customer customer)

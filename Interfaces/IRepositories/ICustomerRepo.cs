@@ -15,6 +15,7 @@ namespace TransportApp.Interfaces.IRepositories
         public bool AddCustomer(string firstName, string lastName, string password,string email, string address, string phoneNo);
 
         public bool InsertStudent(Customer customer);
+        public void displayAll();
 
       //  public Customer find(string lastName);
 
