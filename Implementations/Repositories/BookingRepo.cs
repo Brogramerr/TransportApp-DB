@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using TransportApp.Models;
 using TransportApp.Enums;
+using TransportApp.Repository;
 
-namespace TransportApp.Repository
+namespace TransportApp.Implementations.Repositories
 {
     public class BookingRepo
     {

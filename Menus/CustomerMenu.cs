@@ -7,6 +7,7 @@ using TransportApp.Repository;
 using TransportApp.Enums;
 using MySql.Data.MySqlClient;
 using System.Configuration;
+using TransportApp.Implementations.Repositories;
 
 namespace TransportApp.Menus
 {
@@ -59,11 +60,11 @@ namespace TransportApp.Menus
             Console.WriteLine("Enter Your Last Name");
             string lastName = Console.ReadLine();
             Console.WriteLine("Enter Your  Gender: 1 for Male\t2 for Female\t3 for i don't know ");
-           /* int gender;
+            int gender;
             while (!int.TryParse(Console.ReadLine(), out gender))
             {
                 Console.WriteLine("Invalid input enter 1, 2 or 3");
-            }*/
+            }
 
             Console.WriteLine("Enter  Password");
             string password = Console.ReadLine();
@@ -80,7 +81,7 @@ namespace TransportApp.Menus
             {
                 Console.WriteLine("Invalid Format enter (YYYY-MM-DD) ");
             }
-            customerRepo.AddCustomer(firstName, lastName, password, email, address, phoneNumber);
+            customerRepo.AddCustomer(firstName, lastName,(Gender)gender, password, email, address, phoneNumber, dateOfBirth);
         }
 
         private void LoginMenu()
